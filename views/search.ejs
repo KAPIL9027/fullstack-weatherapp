@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="/myIcon.ico" type="image/x-icon" />
+    <link href="/search.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mausam</title>
+</head>
+
+<body>
+    <div class="weather-content">
+           <div id = "image">
+            <img src = "/weather.png">
+           </div>
+           <form action = "/weather" method = "POST">
+            <div id = "city">
+                <input type = "text" id = "userInput" placeholder = "Weather in your city" name = "q">
+            </div>
+                <button id = "button">Mausam</button>
+           </form>
+            
+        <div class="text">
+            <p>Access current weather data for any location on Earth including over 200,000 cities! We collect and
+                process weather data from different sources such as global and local weather models, satellites, radars
+                and a vast network of weather stations. This application is using open weather Api to get current weather 
+                related data for your city or state. Go check out <a href="https://openweathermap.org/api" id="reference">OpenWeather</a> if you also want to use their massive and amazing api for your projects too.
+            </p>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/search.js"></script>
+</body>
+
+</html>

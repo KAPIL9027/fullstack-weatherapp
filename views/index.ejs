@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="/myIcon.ico" type="image/x-icon" />
+    <link href="/index.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mausam</title>
+</head>
+
+<body>
+    <div class="weather-content" id="<%=API_Key%>">
+        <div class="weather-city">
+            <h2>Latest weather of <span id = "<%=q%>" city></span></h2>
+        </div>
+        <div class="weather-time">
+            <div class="headings">
+                <p>Today</p>
+            </div>
+            <h1 class="year"></h1>
+            <p class="reading"><span month></span>,<span date></span></p>
+        </div>
+        <div class="weather-temp">
+            <div class="headings">
+                <p>Temperature</p>
+            </div>
+            <div class="reading">High: <span high-temp></span><span>&deg;</span>C</div>
+            <div class="reading">Low: <span low-temp></span><span>&deg;</span>C</div>
+            <div class="reading">Feels Like: <span feelslike-temp></span><span>&deg;</span>C</div>
+            <div class="reading temperature">Temp: <span temp></div>
+        </div>
+        <div class="weather-condition">
+            <div class="condition readings">
+                <img class="weather-image">
+                <p class="reading description"><b description></b></p>
+            </div>
+        </div>
+        <div class="text">
+            <p>Access current weather data for any location on Earth including over 200,000 cities! We collect and
+                process weather data from different sources such as global and local weather models, satellites, radars
+                and a vast network of weather stations. This application is using open weather Api to get current weather 
+                related data for your city or state. Go check out <a href="https://openweathermap.org/api" id="reference">OpenWeather</a> if you also want to use their massive and amazing api for your projects too.
+            </p>
+        </div>
+        <div id = "search">
+            <a id = "button" href = "/search">Search</a>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/index.js"></script>
+</body>
+
+</html>

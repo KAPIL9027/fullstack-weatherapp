@@ -1,0 +1,103 @@
+:root
+{
+    --primary: rgb(239, 177, 0);
+}
+*
+{
+    box-sizing: border-box;
+}
+body
+{
+    height: 100vh;
+   background-image: url('https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+   background-size: cover;
+   background-position: center center;
+   display: flex;
+   flex-direction: column;
+   place-items: center;
+
+}
+.text
+{
+    margin: 0px 5rem 0px 5rem;
+}
+.weather-content
+{
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 85%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 50px;
+}
+#userInput
+{
+    width: 20rem;
+    height: 2rem;
+
+}
+#button
+{
+    background-color: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    text-decoration: none;
+    margin: 2rem 6rem;
+    padding: 0.5rem 2rem 0.5rem 2rem; 
+    transition: background-color 0.4s ease-in, border-radius 0.4s ease-in;
+}
+
+#button:hover,#button:focus
+{
+  background-color: var(--primary);
+  color: white;
+  border-radius: 100vh;
+  
+}
+
+#userInput:hover,#userInput:focus,#userInput:focus-within
+{
+    border: 2.5px solid var(--primary);
+    transition: border 0.2s ease-in;
+}
+
+.clicked
+{
+    border: 2.5px solid var(--primary);
+    transition: border 0.2s ease-in;
+}
+
+a
+{
+    color: var(--primary);
+    text-decoration: none;
+}
+
+
+@media(max-width:1024px)
+{
+    .weather-content
+    {
+        margin:0;
+        padding:0;
+        width: 100vw;
+        height: 100vh;
+    }
+    .text
+    {
+        padding: 0rem 3rem 0rem 3rem;
+    }
+}
+
+@media(max-width:754px)
+{
+.text
+{
+    font-size: small;
+    margin: 0rem 0.5rem 0rem 0.5rem;
+}
+}
