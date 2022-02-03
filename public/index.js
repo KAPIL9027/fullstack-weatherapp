@@ -18,7 +18,7 @@ const makeGeocodingRequests = async ()=>
 {
     try
     {
-        const res = await axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${requiredData}&limit=5&appid=${API_Key}`);
+        const res = await axios.get(`https://api.openweathermap.org/geo/1.0/direct?q=${requiredData}&limit=5&appid=${API_Key}`);
         return {
             latitude: res.data[0].lat,
             longitude: res.data[0].lon
@@ -48,7 +48,7 @@ const makeWeatherRequest = async ()=>
         const longi = (await coordinates).longitude;
     
 
-    const res = await axios.get(`http://api.openweathermap.org/data/2.5/weather?lat=${lati}&lon=${longi}&appid=${API_Key}`);
+    const res = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lati}&lon=${longi}&appid=${API_Key}`);
     console.log(res.data);
     city.innerText = res.data.name;
     highTemp.innerText = convertToCelsius(res.data.main.temp_max);
@@ -57,7 +57,7 @@ const makeWeatherRequest = async ()=>
      feelsLikeTemp.innerText = convertToCelsius(res.data.main.feels_like);
      description.innerText = res.data.weather[0].description;
      const imageId = res.data.weather[0].icon;
-     const url = `http://openweathermap.org/img/w/${imageId}.png`;
+     const url = `https://openweathermap.org/img/w/${imageId}.png`;
      weatherImage.src = url;
      const date = new Date(res.data.dt*1000);
      year.innerText = date.getFullYear();
